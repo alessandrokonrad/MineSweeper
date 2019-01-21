@@ -1,13 +1,5 @@
-
-# coding: utf-8
-
-# In[101]:
-
-
 import numpy as np
 
-
-# In[102]:
 
 
 def generate_mine(n):
@@ -32,10 +24,8 @@ def generate_mine(n):
                         grid[y_it,x_it]+=1
                 x_it+=1
             y_it+=1
-    print("mines placed")
+    print("MINES PLACED!")
 
-
-# In[103]:
 
 
 def show_grid(seen):
@@ -49,9 +39,6 @@ def show_grid(seen):
                 show+=" * "
     print(show)
             
-
-
-# In[104]:
 
 
 def sweep(coord,seen):
@@ -103,9 +90,6 @@ def sweep(coord,seen):
         
 
 
-# In[122]:
-
-
 def play():
     seen = {}
     generate_mine(2)
@@ -132,14 +116,9 @@ def play():
             break
 
 
-# In[123]:
 
-
-grid = np.zeros((7,5),dtype=np.uint8)
-
-
-# In[124]:
-
-
-play()
+if __name__ == "__main__":
+    
+    grid = np.zeros((7,5),dtype=np.uint8)
+    play()
 
